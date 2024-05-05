@@ -15,7 +15,7 @@ public class MainArquitecturaTrabajo extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("HomeView.fxml"));
     	
         stage.setTitle("Bienvenido");
         stage.setScene(new Scene(loader.load(), 300, 110));

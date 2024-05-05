@@ -56,7 +56,7 @@ public class LoginController {
 				d.setNombreCompleto(nombreCompleto);
 				
 				FXMLLoader loader = new FXMLLoader(getClass().
-						getResource("/poo2/login/views/WelcomeScreen.fxml"));
+						getResource("/poo2/login/views/WelcomeScreenView.fxml"));
 				
 				Pane root = loader.load();			
 				

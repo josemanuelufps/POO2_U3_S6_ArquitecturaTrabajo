@@ -45,7 +45,7 @@ public class HomeController implements Initializable {
 		
 		try {
 
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/poo2/login/views/InicioSesion.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/poo2/login/views/LoginView.fxml"));
 			Pane root = loader.load();			
 			
 			Scene scene = new Scene(root);
