@@ -52,8 +52,8 @@ public class LoginController {
 			stage.close();
 			
 			try {
-
-				DataTransfer.getInstance().setNombreCompleto(nombreCompleto);
+				DataTransfer d = DataTransfer.getInstance();
+				d.setNombreCompleto(nombreCompleto);
 				
 				FXMLLoader loader = new FXMLLoader(getClass().
 						getResource("/poo2/login/views/WelcomeScreen.fxml"));
