@@ -36,10 +36,9 @@ public class UsuarioDAO {
 	}
 	
 	/**
-	 * Este metodo tiene como propósito validar las credenciales
-	 * ingresadas por el usuario.
+	 * Valida una hora de ingreso dada en formato HH:mm de 24 horas.
 	 * @param horaIngreso: el tiempo (horas y minutos en formato 24h) que ingresa el usuario.
-	 * @return
+	 * @return true si es válida, false de lo contrario.
 	 */
 	public static boolean validarHoraIngreso(String horaIngreso){
 		
