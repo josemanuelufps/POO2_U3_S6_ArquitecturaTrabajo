@@ -3,6 +3,7 @@ package poo2.login.util;
 public class DataTransfer {
 
 	private String nombreCompleto;
+	private String horaIngreso;
 	
 	/*
 	 * Inicio
@@ -33,5 +34,14 @@ public class DataTransfer {
 	public void setNombreCompleto(String nombreCompleto) {
 		this.nombreCompleto = nombreCompleto;
 	}
+
+	public String getHoraIngreso() {
+		return horaIngreso;
+	}
+
+	public void setHoraIngreso(String horaIngreso) {
+		this.horaIngreso = horaIngreso;
+	}
+	
 	
 }

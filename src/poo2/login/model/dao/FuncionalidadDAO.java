@@ -15,6 +15,8 @@ public class FuncionalidadDAO {
 			
 		}else if(usuario.equals("poo1")) {
 			lista = new ArrayList<FuncionalidadDTO>();
+		}else if(usuario.equals("AnorakTeam")) {
+			lista = new ArrayList<FuncionalidadDTO>();
 		}
 		
 		return lista;

@@ -24,6 +24,8 @@ public class LoginController {
 	private TextField passwordField;
 	@FXML
 	private Text mensajeText;
+	@FXML // fx:id="logInTimeField"
+    private TextField logInTimeField; // Value injected by FXMLLoader
 	
 	/**
 	 * Importante tener presente que los objetos de la GUI
@@ -43,8 +45,14 @@ public class LoginController {
 	protected void handleStartButtonAction(ActionEvent event) {
 		
 		try {
-			String nombreCompleto = fachada.validarCredenciales(userField.getText(), 
-					passwordField.getText());
+			String nombreCompleto = null;
+			String horaIngreso = null;
+			if(fachada.validarHoraIngreso(logInTimeField.getText())) {
+				nombreCompleto = fachada.validarCredenciales(userField.getText(), 
+														 passwordField.getText(),
+														 logInTimeField.getText());
+				horaIngreso = logInTimeField.getText();
+			}
 			
 			// Enviar a la siguiente pantalla
 			
@@ -54,6 +62,7 @@ public class LoginController {
 			try {
 				DataTransfer d = DataTransfer.getInstance();
 				d.setNombreCompleto(nombreCompleto);
+				d.setHoraIngreso(horaIngreso);
 				
 				FXMLLoader loader = new FXMLLoader(getClass().
 						getResource("/poo2/login/views/WelcomeScreenView.fxml"));
@@ -80,6 +89,16 @@ public class LoginController {
 		userField.setText("");
 		passwordField.setText("");
 		mensajeText.setText("");
+		logInTimeField.setText("");
 	}
+	
+	@FXML // This method is called by the FXMLLoader when initialization is complete
+    void initialize() {
+        assert logInTimeField != null : "fx:id=\"logInTimeField\" was not injected: check your FXML file 'LoginView.fxml'.";
+        assert mensajeText != null : "fx:id=\"mensajeText\" was not injected: check your FXML file 'LoginView.fxml'.";
+        assert passwordField != null : "fx:id=\"passwordField\" was not injected: check your FXML file 'LoginView.fxml'.";
+        assert userField != null : "fx:id=\"userField\" was not injected: check your FXML file 'LoginView.fxml'.";
+    }
+
 	
 }

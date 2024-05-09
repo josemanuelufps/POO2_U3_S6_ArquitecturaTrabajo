@@ -4,6 +4,7 @@ public class UsuarioDTO {
 
 	private String nombres;
 	private String apellidos;
+	private String horaIngreso;
 	
 	public String getNombres() {
 		return nombres;
@@ -21,10 +22,16 @@ public class UsuarioDTO {
 		this.apellidos = apellidos;
 	}
 	
+	public String getHoraIngreso() {
+		return horaIngreso;
+	}
+
+	public void setHoraIngreso(String horaIngreso) {
+		this.horaIngreso = horaIngreso;
+	}
+
 	public String getNombreCompleto() {
 		return nombres + " " + apellidos;
 	}
-	
-	
 	
 }
